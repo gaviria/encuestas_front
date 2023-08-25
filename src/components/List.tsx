@@ -1,13 +1,18 @@
 import { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const List = () => {
+	const navigate = useNavigate();
 	const [listEncuestas, setListEncuestas] = useState([]);
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
 		const token = localStorage.getItem("token");
+		if (!token) {
+			navigate("/");
+		}
 
 		axios
 			.get("http://localhost:3333/api/v1/encuestas/1", {
@@ -21,7 +26,7 @@ export const List = () => {
 				setData(res.data);
 			})
 			.catch((err) => {
-				console.log(err.response.data[0].message);
+				console.log(err.response?.data[0]?.message);
 			});
 	}, []);
 

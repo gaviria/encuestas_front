@@ -11,9 +11,7 @@ function Auth(props) {
 	});
 
 	useEffect(() => {
-		// Verificamos si existe un token en el local storage
 		if (localStorage.getItem("token")) {
-			// Redirigimos al usuario a la página
 			navigate("/");
 		}
 	}, []);
@@ -109,9 +107,6 @@ function Auth(props) {
 								Submit
 							</button>
 						</div>
-						<p className="text-center mt-2">
-							Forgot <a href="#">password?</a>
-						</p>
 					</div>
 				</form>
 			</div>
@@ -153,9 +148,6 @@ function Auth(props) {
 							Submit
 						</button>
 					</div>
-					<p className="text-center mt-2">
-						Forgot <a href="#">password?</a>
-					</p>
 				</div>
 			</form>
 		</div>

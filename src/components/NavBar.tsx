@@ -44,6 +44,11 @@ const NavBar = () => {
 									Encuesta
 								</Link>
 							</li>
+							<li className="nav-item">
+								<Link className="nav-link" to="/encuesta">
+									Salir
+								</Link>
+							</li>
 						</ul>
 						<form className="d-flex">
 							<input
