@@ -11,6 +11,7 @@ function App() {
 			<NavBar />
 			<Routes>
 				<Route path="/" element={<Auth />} />
+				<Route path="/lista/:page" element={<List />} />
 				<Route path="/lista" element={<List />} />
 				<Route path="/encuesta" element={<Encuesta />} />
 			</Routes>

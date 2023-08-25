@@ -67,12 +67,12 @@ const Encuesta = () => {
 	return (
 		<>
 			<h1 className="text-center mb-5">Encuesta a Diligenciar</h1>
-			{message !== null && (
+			{message !== null && error === null && (
 				<div className="alert alert-primary" role="alert">
 					{message}
 				</div>
 			)}
-			{error !== null && (
+			{error !== null && message === null && (
 				<div className="alert alert-danger" role="alert">
 					{error}
 				</div>
@@ -119,6 +119,7 @@ const Encuesta = () => {
 						className="form-select"
 						value={formData.factores_compra}
 						onChange={(e) => handleChange(e)}
+						required
 					>
 						<option value={"0"}>Elegir</option>
 						<option value={"1"}>La reputación de la marca</option>
@@ -142,6 +143,7 @@ const Encuesta = () => {
 						className="form-select"
 						value={formData.calificacion_prueba}
 						onChange={(e) => handleChange(e)}
+						required
 					>
 						<option value={"0"}>Elegir</option>
 						<option value={"1"}>1</option>
@@ -164,6 +166,7 @@ const Encuesta = () => {
 						className="form-select"
 						value={formData.calificacion_satisfaccion}
 						onChange={(e) => handleChange(e)}
+						required
 					>
 						<option value={"0"}>Elegir</option>
 						<option value={"1"}>1</option>
