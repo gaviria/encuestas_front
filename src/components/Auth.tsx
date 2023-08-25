@@ -60,7 +60,7 @@ function Auth(props) {
 					<div className="Auth-form-content">
 						<h3 className="Auth-form-title">Sign In</h3>
 						<div className="text-center">
-							Not registered yet?{" "}
+							No estas registrado?{" "}
 							<span
 								className="link-primary"
 								onClick={changeAuthMode}
@@ -122,13 +122,13 @@ function Auth(props) {
 				<div className="Auth-form-content">
 					<h3 className="Auth-form-title">Sign Up</h3>
 					<div className="text-center">
-						Already registered?{" "}
+						Ya estas registrado?{" "}
 						<span className="link-primary" onClick={changeAuthMode}>
 							Sign In
 						</span>
 					</div>
 					<div className="form-group mt-3">
-						<label>Email address</label>
+						<label>Email</label>
 						<input
 							type="email"
 							className="form-control mt-1"
@@ -145,7 +145,7 @@ function Auth(props) {
 					</div>
 					<div className="d-grid gap-2 mt-3">
 						<button type="submit" className="btn btn-primary">
-							Submit
+							Enviar
 						</button>
 					</div>
 				</div>
